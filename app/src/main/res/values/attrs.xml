@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tag Display Attributes -->
+    <attr name="tagBackground" format="color|reference" />
+    <attr name="tagIconColor" format="color|reference" />
+    <attr name="tagTextColor" format="color|reference" />
+
+    <!-- Tag Edit Attributes -->
+    <attr name="tagBackgroundEdit" format="color|reference" />
+    <attr name="tagBorderEdit" format="color|reference" />
+    <attr name="tagIconColorEdit" format="color|reference" />
+    <attr name="tagTextColorEdit" format="color|reference" />
+    <attr name="tagRemoveIconColor" format="color|reference" />
+</resources>

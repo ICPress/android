@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <!-- Header with professional styling -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/primaryColor">
+
+            <TextView
+                android:id="@+id/dialogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Story Title"
+                android:textColor="@color/textLight"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:padding="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/close"
+                app:srcCompat="@drawable/ic_baseline_cancel_24"
+                app:tint="@color/textLight" />
+        </RelativeLayout>
+
+        <!-- Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp">
+
+            <!-- Hero Image Used Notice -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/secondaryColor_20"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp"
+                app:cornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_image_not_available"
+                    android:tint="@color/secondaryColor"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hero image detected"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Optional"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="12sp"
+                    android:background="@color/surfaceLight"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+
+            <!-- Instruction Text -->
+            <TextView
+                android:id="@+id/instruction_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Give your story a compelling title"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/error_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="A great title helps readers discover and engage with your content"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4sp"
+                android:fontFamily="sans-serif" />
+
+            <!-- Title Input with Character Counter -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundColor="@color/white_10"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/secondaryColor"
+                app:boxStrokeWidth="1dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="60"
+                app:counterTextColor="@color/secondaryTextColor"
+                app:hintTextColor="@color/secondaryColor"
+                app:placeholderTextColor="@color/secondaryTextColor"
+                app:startIconDrawable="@drawable/ic_title"
+                app:startIconTint="@color/secondaryColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/content_title_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:fontFamily="sans-serif"
+                    android:hint="e.g., The Future of Quantum Computing"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences|textAutoCorrect"
+                    android:maxLength="60"
+                    android:maxLines="2"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/secondaryTextColor"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tips for good titles -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                android:text="💡 Tips for a great title:\n• Be clear and specific\n• Include key topics\n• Keep it under 60 characters"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4sp"
+                android:fontFamily="sans-serif"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/white_10"
+                app:cornerRadius="8dp" />
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:paddingTop="8dp">
+
+                <Button
+                    android:id="@+id/skip_btn"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Skip"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:backgroundTint="@android:color/transparent"
+                    android:letterSpacing="0.05"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/cancel_btn"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Cancel"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:backgroundTint="@android:color/transparent"
+                    android:letterSpacing="0.05" />
+
+                <Button
+                    android:id="@+id/ok_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@color/secondaryColor"
+                    android:elevation="0dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.05"
+                    android:stateListAnimator="@null"
+                    android:text="Publish"
+                    android:textColor="@color/textLight"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:translationZ="0dp"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

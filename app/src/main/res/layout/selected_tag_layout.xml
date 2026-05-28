@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/tag_background_edit"
+    android:orientation="horizontal"
+    android:paddingStart="10dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="6dp"
+    android:paddingBottom="6dp"
+    android:elevation="2dp">
+
+    <!-- Hash icon -->
+    <ImageView
+        android:id="@+id/hashtag_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_tag_black_24dp"
+        android:importantForAccessibility="no"
+        app:tint="?attr/tagIconColorEdit" />
+
+    <!-- Tag text -->
+    <TextView
+        android:id="@+id/hashtag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="6dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="ukraine"
+        android:textColor="?attr/tagTextColorEdit"
+        android:textSize="13sp" />
+
+    <!-- Remove button -->
+    <ImageView
+        android:id="@+id/remove_tag_iv"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Remove tag"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="2dp"
+        app:tint="?attr/tagRemoveIconColor" />
+
+</LinearLayout>

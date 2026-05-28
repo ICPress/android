@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <!-- Header with AI theme -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/primaryColor">
+
+            <!-- Decorative AI pattern -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:alpha="0.1"
+                android:src="@drawable/ic_ai_pattern"
+                app:tint="@color/textLight" />
+
+            <!-- Title with icon -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_ai_pattern"
+                    app:tint="@color/textLight"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI Rewrite"
+                    android:textColor="@color/textLight"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+            </LinearLayout>
+
+            <!-- Close Button -->
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:padding="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="@string/close"
+                app:srcCompat="@drawable/ic_baseline_cancel_24"
+                app:tint="@color/textLight" />
+
+        </RelativeLayout>
+
+        <!-- Content Section -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="16dp">
+
+                <!-- Selected Text Preview -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Selected text:"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/selected_text_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white_10"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="3"
+                    android:padding="12dp"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="14sp"
+                    app:cornerRadius="8dp" />
+
+                <!-- Custom Prompt Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Rewrite instructions:"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/prompt_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxBackgroundColor="@color/white_10"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/secondaryColor"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/secondaryColor"
+                    app:hintTextColor="@color/secondaryColor"
+                    app:placeholderTextColor="@color/secondaryTextColor"
+                    app:startIconDrawable="@drawable/ic_edit_note"
+                    app:startIconTint="@color/secondaryColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/prompt_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="e.g., Make it more professional, simplify language..."
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLength="5000"
+                        android:minHeight="80dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="12dp"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/secondaryTextColor"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Model Selection -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Groq Model:"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <Spinner
+                    android:id="@+id/model_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/spinner_background"
+                    android:paddingHorizontal="12dp"
+                    android:popupBackground="@color/surfaceLight" />
+
+                <!-- Token Usage Warning -->
+                <LinearLayout
+                    android:id="@+id/token_warning_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/warning_20"
+                    android:padding="12dp"
+                    android:visibility="gone"
+                    app:cornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_info_outline"
+                        app:tint="@color/warning"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/token_warning_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/warning"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="2sp" />
+                </LinearLayout>
+
+                <!-- Character Count & Estimate -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:background="@color/white_10"
+                    app:cornerRadius="6dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total characters:"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/total_chars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(~"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/estimated_tokens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" tokens)"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="4dp">
+
+                    <!-- Cancel Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cancel_button"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="12dp"
+                        android:text="Cancel"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="8dp" />
+
+                    <!-- Rewrite Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/rewrite_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Rewrite"
+                        android:textColor="@color/textLight"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/secondaryColor"
+                        android:letterSpacing="0.05"
+                        app:cornerRadius="8dp"
+                        android:stateListAnimator="@null"
+                        android:elevation="0dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

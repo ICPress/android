@@ -1,0 +1,2 @@
+include ':app', 'androidColorPickermaster', 'cropper',':TrueTime'
+rootProject.name = "StoryPop"

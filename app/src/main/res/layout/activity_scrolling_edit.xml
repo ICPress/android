@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true">
+
+    <!-- Mode Indicator -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/black_to_transparent_gradient"
+        android:translationZ="2dp">
+
+        <TextView
+            android:id="@+id/modeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="draft"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/modeTextView"
+            android:src="@drawable/ic_edit_square"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="1dp"
+        tools:context=".ArticleContentActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.StoryPop.AppBarOverlay">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:collapsedTitleGravity="right"
+                app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+                app:contentScrim="@color/primaryColor"
+                app:expandedTitleGravity="right"
+                app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                app:toolbarId="@+id/toolbar">
+
+                <RelativeLayout
+                    android:id="@+id/titleContent_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax">
+
+                    <ImageView
+                        android:id="@+id/content_title_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="@dimen/_250sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@color/primaryDarkColor" />
+
+                    <EditText
+                        android:id="@+id/content_title_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:fontFamily="@font/mplus2_medium"
+                        android:hint="Your story title"
+                        android:inputType="textMultiLine"
+                        android:lineSpacingMultiplier="1.2"
+                        android:maxLength="60"
+                        android:maxLines="3"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="72dp"
+                        android:paddingBottom="16dp"
+                        android:selectAllOnFocus="false"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="0"
+                        android:shadowDy="1"
+                        android:shadowRadius="4"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white_50"
+                        android:textSize="22sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Title style toolbar -->
+        <LinearLayout
+            android:id="@+id/title_style_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:background="@drawable/title_toolbar_bg"
+            android:elevation="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <!-- Drag handle pill -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/drag_handle_bg" />
+
+            <!-- Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:text="Title Style"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:letterSpacing="0.1"
+                android:alpha="0.6" />
+
+            <!-- Action buttons row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Image picker -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_title_menu_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/secondaryColor"
+                        app:fabCustomSize="44dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/ic_image_photography"
+                        app:tint="@color/white"
+                        app:elevation="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Image"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="10sp"
+                        android:alpha="0.7" />
+                </LinearLayout>
+
+                <!-- Fill/background color -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_title_menu_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/secondaryColor"
+                        app:fabCustomSize="44dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/ic_fill"
+                        app:tint="@color/white"
+                        app:elevation="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Background"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="10sp"
+                        android:alpha="0.7" />
+                </LinearLayout>
+
+                <!-- Text highlight -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_title_menu_text_highlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/secondaryColor"
+                        app:fabCustomSize="44dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/ic_highlight_marker"
+                        app:tint="@color/white"
+                        app:elevation="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Highlight"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="10sp"
+                        android:alpha="0.7" />
+                </LinearLayout>
+
+                <!-- Add Map -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_add_map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/secondaryColor"
+                        app:fabCustomSize="44dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/ic_maps_black"
+                        app:tint="@color/white"
+                        app:elevation="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Map"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="10sp"
+                        android:alpha="0.7" />
+                </LinearLayout>
+
+                <!-- Close -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_title_menu_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/secondaryColor"
+                        app:fabCustomSize="44dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/ic_check_circle"
+                        app:tint="@color/white"
+                        app:elevation="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Done"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Content body -->
+        <include layout="@layout/content_scrolling_edit" />
+
+        <!-- Text Formatting Toolbar -->
+        <LinearLayout
+            android:id="@+id/softinput_extra_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="@color/toolbar_background"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/bold_text_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/ic_bold_text"
+                app:tint="@color/primaryTextColor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/italic_text_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/ic_italic"
+                app:tint="@color/primaryTextColor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/underline_text_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/ic_underline"
+                app:tint="@color/primaryTextColor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/text_size_increase_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/font_size_increase_icon"
+                app:tint="@color/primaryTextColor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/refer_link_text_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/ic_custom_at"
+                app:tint="@color/primaryTextColor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ai_text_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/ic_ai_pattern"
+                app:tint="@color/secondaryColor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/image_text_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                style="?android:attr/borderlessButtonStyle"
+                android:src="@drawable/ic_image_photography"
+                app:tint="@color/primaryTextColor" />
+        </LinearLayout>
+
+        <!-- Review Button (replaces Publish) -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/reviewFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="@dimen/fab_margin"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="Review"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_check_circle"
+            app:iconGravity="end"
+            app:iconTint="@color/white" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
