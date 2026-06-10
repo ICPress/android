@@ -62,10 +62,11 @@ class S3Handler {
                 val responseString = response.body()?.string() ?: return null
                 Log.v(Config.logTag, "Received response: $responseString")
                 val ivSecretArray = responseString.split('\n')
+                val encodedSecret = Config.apiEndpoints.firstOrNull { x-> x.url ==  Config.APP_ENDPOINT}?.getTokenEncoded() ?: Config.apiEndpoints.last().getTokenEncoded()
                 val key: SecretKey = SecretKeySpec(
-                    Config.ENCODED_TOKEN_SECRET,
+                    encodedSecret,
                     0,
-                    Config.ENCODED_TOKEN_SECRET.size,
+                    encodedSecret.size,
                     "AES"
                 )
                 val cipher = Cipher.getInstance("AES/GCM/NoPadding")

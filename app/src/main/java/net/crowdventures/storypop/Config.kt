@@ -26,7 +26,9 @@ class Config {
         val firebaseAnalytics = Firebase.analytics
         val MAX_USERNAME_LENGTH =20
         val MAX_HASHTAG_LENGTH =15
-        val MIN_HASHTAG_LENGTH =4
+        val MIN_HASHTAG_LENGTH =2
+
+        val MAX_HASHTAG_COUNT =6
         val LARGE_FONT_SIZE =20 //device independent pixels
         val defaultPhotoFile = "photo.jpeg"
         val logTag = "SPOP"
@@ -40,12 +42,10 @@ class Config {
         val MAX_IMAGE_SCALED_HEIGHT = 576f
         val MINIATURE_BITMAP_PREFIX= "m_"
         val GROQ_ENDPOINT="https://api.groq.com/openai/"
-        val TOKEN_SECRET ="Your16LengthKey0"
-        val ENCODED_TOKEN_SECRET = TOKEN_SECRET.toByteArray(Charsets.US_ASCII)
         const val NTP_SERVER = "time.google.com"
         val apiEndpoints = listOf(
-            ApiEndpoint("ICPress Global", "https://api.icpress.org", isDefault = true),
-            ApiEndpoint("Custom", "")
+            ApiEndpoint("ICPress Global", "https://api.icpress.org", "****************", isDefault = true),
+            ApiEndpoint("Custom", "", "Your16LengthKey0")
         )
         @Volatile var APP_ENDPOINT=apiEndpoints[0].url
         @Volatile var refreshToken:RefreshToken? = null

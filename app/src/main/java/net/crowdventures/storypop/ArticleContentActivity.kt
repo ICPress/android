@@ -960,6 +960,7 @@ class ArticleContentActivity : AppCompatActivity() {
         contentTextView.imageSpans = enabledStylesAndSpansAdded.second
         contentTextView.loggedInUser = loggedInUser
         contentTextView.movementMethod = LinkMovementMethod.getInstance()
+        contentTextView.linksClickable = true
         if (spanStringTitle.isNotEmpty()){
             headerImageTextView.text = spanStringTitle
             headerImageTextView.post {
@@ -1241,8 +1242,8 @@ class ArticleContentActivity : AppCompatActivity() {
         (sources).forEachIndexed { index, source ->
             val view = layoutInflater.inflate(R.layout.item_public_source, container, false)
             view.findViewById<TextView>(R.id.source_title).text =  StoryUtil.extractTitleFromUrl(source)
-            view.findViewById<TextView>(R.id.source_url).text = source
-            val descriptionView = view.findViewById<TextView>(R.id.source_description)
+            val linkTv = view.findViewById<TextView>(R.id.source_url)
+            StoryUtil.makeUrlClickable(linkTv,source,source,false)
             view.findViewById<ImageView>(R.id.remove_source_btn).visibility  = View.GONE
             container.addView(view)
         }

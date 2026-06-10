@@ -8,15 +8,21 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Build
 import android.os.Parcelable
 import android.text.Layout
 import android.text.ParcelableSpan
 import android.text.Spannable
+import android.text.SpannableString
 import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.TextPaint
+import android.text.method.LinkMovementMethod
 import android.text.style.AbsoluteSizeSpan
 import android.text.style.AlignmentSpan
 import android.text.style.BulletSpan
+import android.text.style.ClickableSpan
 import android.text.style.QuoteSpan
 import android.text.style.StyleSpan
 import android.text.style.URLSpan
@@ -92,6 +98,25 @@ class StoryUtil {
         val coroutineExceptionHandler = CoroutineExceptionHandler{_, throwable ->
             throwable.printStackTrace()
         }
+
+        fun makeUrlClickable(textView: TextView, url: String, displayText: String = url,  showUnderline: Boolean=true) {
+            val spannable = SpannableString(displayText)
+            val clickableSpan = object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    widget.context.startActivity(intent)
+                }
+                override fun updateDrawState(ds: TextPaint) {
+                    super.updateDrawState(ds)
+                    ds.isUnderlineText = showUnderline  // optional: customize appearance
+                }
+            }
+            spannable.setSpan(clickableSpan, 0, displayText.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+            textView.text = spannable
+            textView.movementMethod = LinkMovementMethod.getInstance()
+            textView.highlightColor = Color.TRANSPARENT  // optional: removes tap highlight
+        }
+
         fun restoreTitleHighlightColorFromStylingInfo(
             stylingInfo: StylingInfo,
             spanStringTitle: SpannableStringBuilder
@@ -435,7 +460,7 @@ class StoryUtil {
             }
             val closeBtn = view.findViewById<ImageView>(R.id.close_btn)
             closeBtn.setOnClickListener { _ -> alertDialog.dismiss() }
-            val cancelBtn = view.findViewById<ImageView>(R.id.cancel_btn)
+            val cancelBtn = view.findViewById<Button>(R.id.cancel_btn)
             cancelBtn.setOnClickListener { _ -> alertDialog.dismiss() }
             alertDialog.show()
         }

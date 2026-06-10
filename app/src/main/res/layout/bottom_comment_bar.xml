@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/user_secret_solid" />
+                android:src="@drawable/user_solid_full" />
         </androidx.cardview.widget.CardView>
 
         <!-- Input field with reply hint -->

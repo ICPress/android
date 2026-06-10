@@ -940,11 +940,12 @@ class ArticleContentEditActivity : BaseActivity() {
             savedInstanceState.getParcelable(savedInstanceStateLoggedInUser)
         Log.v(Config.logTag, "ArticleContent running onCreate with user:" + loggedInUser?.username)
         val hashtagWarningTextView = findViewById<TextView>(R.id.hashtag_warning_tv)
+        hashtagWarningTextView.text =getString(R.string.hashtag_length_info_warning, Config.MIN_HASHTAG_LENGTH)
         tagsSelectedFlex = findViewById(R.id.tags_selected_flex)
         storyViewModel.selectedTags.observe(this) { x ->
             if (x == null) return@observe
-            if (x.size > 3) {
-                storyViewModel.selectedTags.value = ArrayList(x.subList(0, 2))
+            if (x.size > Config.MAX_HASHTAG_COUNT) {
+                storyViewModel.selectedTags.value = ArrayList(x.subList(0, Config.MAX_HASHTAG_COUNT-1))
                 return@observe
             }
             tagsSelectedFlex.removeAllViews()
@@ -952,11 +953,11 @@ class ArticleContentEditActivity : BaseActivity() {
                 inflateTagView(tag)
             }
             hashtagWarningTextView.visibility = View.GONE
-            if (storyViewModel.selectedTags.value?.size == 3 || publishedModelSlugTitle != null) {
+            if (storyViewModel.selectedTags.value?.size == Config.MAX_HASHTAG_COUNT || publishedModelSlugTitle != null) {
                 tagsAutoCompleteTextView.visibility = View.GONE
                 tagsAutoCompleteTextView.isEnabled = false
                 addTagBtn.visibility = View.GONE
-            } else if (storyViewModel.selectedTags.value?.size != 3) {
+            } else if (storyViewModel.selectedTags.value?.size != Config.MAX_HASHTAG_COUNT) {
                 tagsAutoCompleteTextView.visibility = View.VISIBLE
                 tagsAutoCompleteTextView.isEnabled = true
                 addTagBtn.visibility = View.VISIBLE
@@ -981,7 +982,7 @@ class ArticleContentEditActivity : BaseActivity() {
                         nestedScrollView,
                         tagsAutoCompleteTextView,
                         this,
-                        getString(R.string.hashtag_minimum_length_warning),
+                        getString(R.string.hashtag_minimum_length_warning, Config.MIN_HASHTAG_LENGTH),
                         publishFab
                     )
                 }
@@ -1007,11 +1008,11 @@ class ArticleContentEditActivity : BaseActivity() {
                             nestedScrollView,
                             tagsAutoCompleteTextView,
                             this,
-                            getString(R.string.hashtag_minimum_length_warning),
+                            getString(R.string.hashtag_minimum_length_warning, Config.MIN_HASHTAG_LENGTH),
                             publishFab
                         )
                     }
-                    if (storyViewModel.selectedTags.value?.size != 3) return@setOnEditorActionListener true
+                    if (storyViewModel.selectedTags.value?.size != Config.MAX_HASHTAG_COUNT) return@setOnEditorActionListener true
                 }
                 false
             }

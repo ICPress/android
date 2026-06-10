@@ -43,15 +43,14 @@
                         android:layout_height="32dp"
                         android:layout_centerVertical="true"
                         app:cardCornerRadius="16dp"
-                        app:cardElevation="0dp"
-                        app:cardBackgroundColor="@color/avatar_background">
+                        app:cardElevation="0dp">
 
                         <ImageView
                             android:id="@+id/avatar_iv"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/user_secret_solid"
+                            android:src="@drawable/user_solid_full"
                             android:translationZ="1dp" />
                     </androidx.cardview.widget.CardView>
 
@@ -63,7 +62,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_toEndOf="@id/avatar_crop_cv"
                         android:text="&#64;username"
-                        android:textColor="@color/primaryColor"
+                        android:textColor="@color/primaryTextColor"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -245,7 +244,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_below="@id/hashtags_ac_tv"
                                     android:layout_marginTop="4dp"
-                                    android:text="@string/hashtag_length_info_warning"
                                     android:textSize="10sp"
                                     android:textColor="@color/error"
                                     android:visibility="gone" />
@@ -331,7 +329,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="12dp"
                 android:text="Sources"
-                android:textColor="@color/primaryColor"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

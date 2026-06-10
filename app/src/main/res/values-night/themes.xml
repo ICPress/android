@@ -106,7 +106,7 @@
         <item name="colorSecondaryVariant">@color/secondaryColor</item>
         <item name="android:colorBackground">@color/surfaceDark</item>
         <item name="android:textColorPrimary">@color/textDark</item>
-        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+        <item name="android:textColorSecondary">@color/textDark</item>
     </style>
 
     <!-- Alert Dialog Theme -->

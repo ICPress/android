@@ -327,7 +327,7 @@ class Profile {
             ) {
                 Box(contentAlignment = Alignment.Center) {
                     Icon(
-                        painter = painterResource(id = R.drawable.user_secret_solid),
+                        painter = painterResource(id = R.drawable.user_solid_full),
                         contentDescription = "Logo",
                         modifier = Modifier.size(40.dp)
                     )

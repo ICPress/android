@@ -103,8 +103,8 @@
     <string name="today">Today</string>
     <string name="like_article">Like article</string>
     <string name="token">TOKEN</string>
-    <string name="hashtag_minimum_length_warning">Minimum length of a hashtag is 4 characters</string>
-    <string name="hashtag_length_info_warning">Enter at least 4 characters</string>
+    <string name="hashtag_minimum_length_warning">Minimum length of a hashtag is %1$d characters</string>
+    <string name="hashtag_length_info_warning">Enter at least %1$d characters</string>
     <string name="account_deleted">Account deleted</string>
     <string name="COIN">COIN</string>
     <string name="now">Now</string>

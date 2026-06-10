@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Source Title"
-            android:textColor="@color/primaryColor"
+            android:textColor="@color/primaryTextColor"
             android:textSize="14sp"
             android:textStyle="bold" />
 
