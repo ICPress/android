@@ -67,6 +67,11 @@ class TextStyleManager(
         }
     }
 
+    fun disableTextWatcher() {
+        editTextAttached.removeTextChangedListener(textWatcher)
+        watcherSet = false
+    }
+
     fun addEnabledStyles(enabledStylesNew: List<EnabledStyle>) {
         enabledStyles.addAll(enabledStylesNew)
         storyViewModel.setEnabledStyles(enabledStyles.toMutableList())

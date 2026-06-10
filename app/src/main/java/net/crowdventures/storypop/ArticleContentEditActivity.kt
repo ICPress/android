@@ -293,7 +293,7 @@ class ArticleContentEditActivity : BaseActivity() {
     }
 
     private fun saveDraft() {
-        val stylingInfo = storyViewModel.generateStylingInfo(contentEditText, true)
+        val stylingInfo = storyViewModel.generateStylingInfo(contentEditText, true, textStyleManager)
         val title =
             if (titleEditText.text.isEmpty()) getString(R.string.unnamed_story) else titleEditText.text.toString()
         var savedViewModel = ArticleListActivity.storySavedViewModel
@@ -332,7 +332,7 @@ class ArticleContentEditActivity : BaseActivity() {
             savedInstanceStatePublishedEmptyTitle,
             publishedModelEmptyTitle
         )
-        storyViewModel.saveUserStory(contentEditText, outState)
+        storyViewModel.saveUserStory(contentEditText, outState, textStyleManager)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -514,7 +514,7 @@ class ArticleContentEditActivity : BaseActivity() {
                 titleEditText.text.toString(),
                 storyViewModel.alternativeTitle.value ?: "",
                 locationAutoCompleteTextView.text.toString(),
-                storyViewModel.generateStylingInfo(contentEditText, true),
+                storyViewModel.generateStylingInfo(contentEditText, true, textStyleManager),
                 storyViewModel.storySavedModel?.storyMap
             )
         } else if (requestCode == MapEditorActivity.REQUEST_CODE && resultCode == RESULT_OK) {
@@ -1064,7 +1064,7 @@ class ArticleContentEditActivity : BaseActivity() {
             val contentTitle = titleEditText.text.toString()
             val contentText = contentEditText.text.trimEnd('\u0000').toString()
             val contentLocation = locationAutoCompleteTextView.text.toString()
-            val stylingInfo = storyViewModel.generateStylingInfo(contentEditText, true)
+            val stylingInfo = storyViewModel.generateStylingInfo(contentEditText, true, textStyleManager)
             val titleIsEmpty =
                 contentTitle.equals(resources.getString(R.string.unnamed_story)) || contentTitle == resources.getString(
                     R.string.default_story_title
@@ -1594,7 +1594,7 @@ class ArticleContentEditActivity : BaseActivity() {
             return
         }
 
-        val stylingInfo = storyViewModel.generateStylingInfo(contentEditText, true)
+        val stylingInfo = storyViewModel.generateStylingInfo(contentEditText, true, textStyleManager)
         val location = locationAutoCompleteTextView.text.toString()
 
         val intent = ArticleReviewActivity.startForReview(

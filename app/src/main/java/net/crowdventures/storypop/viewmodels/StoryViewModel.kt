@@ -14,9 +14,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import net.crowdventures.storypop.ArticleContentEditActivity
 import net.crowdventures.storypop.Config
 import net.crowdventures.storypop.Constants
+import net.crowdventures.storypop.TextStyleManager
 import net.crowdventures.storypop.dto.ArticlePrivateSource
 import net.crowdventures.storypop.dto.StoryMap
 import net.crowdventures.storypop.libs.RoundedBackgroundSpan
@@ -101,20 +101,25 @@ class StoryViewModel(
             return null
         }
     }
-    fun sanitizeInvalidStyles(enabledStyles: Array<EnabledStyle>,editText: EditText, updateEditTextTrimNulls:Boolean):List<EnabledStyle>{ // android text-watcher can loose track of current index selected due to old bugg!?!?
+    fun sanitizeInvalidStyles(enabledStyles: Array<EnabledStyle>,editText: EditText, updateEditTextTrimNulls:Boolean, textStyleManager: TextStyleManager):List<EnabledStyle>{ // android text-watcher can loose track of current index selected due to old bugg!?!?
         val editTextLimit = if (editText.text.length > Constants.MAX_CONTENT_LENGTH) Constants.MAX_CONTENT_LENGTH else editText.text.length
-        if (updateEditTextTrimNulls) editText.setText(editText.text.trimEnd('\u0000')) //do not do this if editing text, focus is reset to start of input
+
+        if (updateEditTextTrimNulls){
+            textStyleManager.disableTextWatcher() //remove watcher before performing trim operation
+            editText.setText(editText.text.trimEnd('\u0000'))
+            textStyleManager.setTextWatcher()
+        } //do not do this if editing text, focus is reset to start of input
         return enabledStyles.filter {  it.spanInfo.start >= 0 && it.spanInfo.start <= editTextLimit && it.spanInfo.end >= 0 && it.spanInfo.end <= editTextLimit  }
     }
 
-    fun generateStylingInfo(editText: EditText, updateEditTextTrimNulls:Boolean):StylingInfo{
+    fun generateStylingInfo(editText: EditText, updateEditTextTrimNulls:Boolean, textStyleManager: TextStyleManager):StylingInfo{
         val backgroundColor = if (titleBackgroundColor.value == null)  0 else titleBackgroundColor.value!!
         val highlightColor  = if (titleHighlightColor.value == null)  0 else titleHighlightColor.value!!.backgroundColor
         val spanInfoList:MutableList<SpanInfo>
         if (enabledStyles.value== null)
             spanInfoList = mutableListOf<SpanInfo>()
         else
-            spanInfoList = sanitizeInvalidStyles(enabledStyles.value!!,editText, updateEditTextTrimNulls).map {x-> x.spanInfo  }.toMutableList()
+            spanInfoList = sanitizeInvalidStyles(enabledStyles.value!!,editText, updateEditTextTrimNulls, textStyleManager).map {x-> x.spanInfo  }.toMutableList()
         val stylingInfo = StylingInfo(backgroundColor,highlightColor,titleImageUri.value, spanInfoList )
         return stylingInfo
     }
@@ -152,10 +157,10 @@ fun generateSpanIndexKeyValuePair(editText: EditText,enabledStyles: Array<Enable
         }
         return ParcellableKeyValuePair(mutableList)
     }
-    fun saveUserStory(editText: EditText, fullAppState: Bundle){
+    fun saveUserStory(editText: EditText, fullAppState: Bundle, textStyleManager: TextStyleManager){
         Log.v(Config.logTag,"App paused, trying to save state..")
         if (enabledStyles.value != null) {
-            val stylingInfo = generateStylingInfo(editText,false)
+            val stylingInfo = generateStylingInfo(editText,false, textStyleManager)
             val spanIndexKeyValuePair =generateSpanIndexKeyValuePair(editText,enabledStyles.value!!)
             Log.v(Config.logTag,"Found ${stylingInfo.spans.size} spansInfo to save" +
                     " with ${spanIndexKeyValuePair.keyValuePair.size} spans that can be retained")
