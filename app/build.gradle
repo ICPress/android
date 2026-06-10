@@ -14,8 +14,8 @@ android {
         applicationId "net.crowdventures.storypop"
         minSdkVersion 23
         targetSdkVersion 37
-        versionCode 40
-        versionName "1.25"
+        versionCode 41
+        versionName "1.26"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
