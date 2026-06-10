@@ -11,9 +11,8 @@
     android:paddingTop="6dp"
     android:paddingEnd="6dp"
     android:paddingBottom="6dp"
-    android:elevation="2dp">
+    android:gravity="center_vertical">
 
-    <!-- Hash icon -->
     <ImageView
         android:id="@+id/hashtag_icon"
         android:layout_width="14dp"
@@ -24,21 +23,18 @@
         android:importantForAccessibility="no"
         app:tint="?attr/tagIconColorEdit" />
 
-    <!-- Tag text -->
     <TextView
         android:id="@+id/hashtag_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginEnd="6dp"
+        android:layout_marginEnd="4dp"
         android:ellipsize="end"
         android:fontFamily="sans-serif-medium"
         android:maxLines="1"
-        android:text="ukraine"
         android:textColor="?attr/tagTextColorEdit"
         android:textSize="13sp" />
 
-    <!-- Remove button -->
     <ImageView
         android:id="@+id/remove_tag_iv"
         android:layout_width="18dp"

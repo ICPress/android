@@ -48,7 +48,7 @@
             android:clickable="true"
             android:focusable="true"
             android:background="?selectableItemBackgroundBorderless"
-            app:tint="@color/secondaryTextColor" />
+            app:tint="@color/textSecondary" />
     </RelativeLayout>
 
     <!-- Comment input area -->
@@ -68,7 +68,7 @@
             android:layout_centerVertical="true"
             app:cardCornerRadius="20dp"
             app:cardElevation="2dp"
-            app:cardBackgroundColor="@color/avatar_background">
+            >
 
             <ImageView
                 android:id="@+id/comment_user_avatar_iv"
@@ -95,7 +95,7 @@
                 android:hint="Add a comment..."
                 android:textSize="14sp"
                 android:textColor="?android:textColorPrimary"
-                android:textColorHint="@color/secondaryTextColor"
+                android:textColorHint="@color/textSecondary"
                 android:maxLength="500"
                 android:maxLines="4"
                 android:paddingVertical="12dp"
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:text="Commenting as username"
                 android:textSize="11sp"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 

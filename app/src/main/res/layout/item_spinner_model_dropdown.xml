@@ -10,7 +10,7 @@
         android:id="@+id/model_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/primaryTextColor"
+        android:textColor="@color/textPrimary"
         android:textSize="15sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-medium" />
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:textColor="@color/secondaryTextColor"
+        android:textColor="@color/textSecondary"
         android:textSize="12sp"
         android:fontFamily="sans-serif" />
 

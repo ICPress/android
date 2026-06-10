@@ -62,7 +62,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_toEndOf="@id/avatar_crop_cv"
                         android:text="&#64;username"
-                        android:textColor="@color/primaryTextColor"
+                        android:textColor="@color/textPrimary"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
@@ -75,7 +75,7 @@
                         android:layout_toEndOf="@id/username_post_tv"
                         android:text="@string/now"
                         android:textSize="12sp"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textStyle="italic" />
                 </RelativeLayout>
 
@@ -101,7 +101,7 @@
                             android:layout_height="36dp"
                             app:cardElevation="1dp"
                             app:cardCornerRadius="18dp"
-                            app:cardBackgroundColor="@color/tag_background_light"
+
                             android:visibility="visible">
 
                             <LinearLayout
@@ -142,7 +142,7 @@
                                 android:layout_height="16dp"
                                 android:layout_gravity="center_vertical"
                                 android:src="@drawable/ic_maps_black"
-                                app:tint="@color/secondaryTextColor" />
+                                app:tint="@color/textSecondary" />
 
                             <ProgressBar
                                 android:id="@+id/location_pb"
@@ -162,7 +162,7 @@
                                 android:hint="Location name"
                                 android:textSize="14sp"
                                 android:textColor="?android:textColorPrimary"
-                                android:textColorHint="@color/secondaryTextColor"
+                                android:textColorHint="@color/textSecondary"
                                 android:maxLength="70"
                                 android:singleLine="true"
                                 android:background="@null" />
@@ -208,7 +208,7 @@
                                     android:hint="#tag"
                                     android:textSize="14sp"
                                     android:textColor="?android:textColorPrimary"
-                                    android:textColorHint="@color/secondaryTextColor"
+                                    android:textColorHint="@color/textSecondary"
                                     android:singleLine="true"
                                     android:gravity="center_vertical"
                                     android:paddingStart="0dp"
@@ -223,7 +223,7 @@
                                     android:layout_centerVertical="true"
                                     app:cardElevation="1dp"
                                     app:cardCornerRadius="18dp"
-                                    app:cardBackgroundColor="@color/tag_background_light"
+                                    app:cardBackgroundColor="@color/tagBackground"
                                     app:cardPreventCornerOverlap="false"
                                     app:contentPadding="0dp">
 
@@ -245,7 +245,7 @@
                                     android:layout_below="@id/hashtags_ac_tv"
                                     android:layout_marginTop="4dp"
                                     android:textSize="10sp"
-                                    android:textColor="@color/error"
+                                    android:textColor="@color/colorError "
                                     android:visibility="gone" />
                             </RelativeLayout>
                         </RelativeLayout>
@@ -302,7 +302,7 @@
                     android:hint="Write your story here..."
                     android:textSize="16dp"
                     android:textColor="?android:textColorPrimary"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColorHint="@color/textSecondary"
                     android:lineSpacingExtra="4dp"
                     android:maxLength="10000"
                     android:inputType="textAutoCorrect|textMultiLine"
@@ -321,7 +321,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginVertical="16dp"
-                android:background="@color/border_color" />
+                android:background="@color/colorBorder" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -329,7 +329,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="12dp"
                 android:text="Sources"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -340,7 +340,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="Public Sources"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -350,7 +350,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Add links to websites, articles, or public references"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="12sp" />
 
             <LinearLayout
@@ -382,7 +382,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Private Sources"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -392,7 +392,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Add confidential source information (only visible to moderators)"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="12sp" />
 
             <LinearLayout

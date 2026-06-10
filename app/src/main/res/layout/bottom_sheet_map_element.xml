@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/surfaceLight"
+    android:background="@color/colorSurface"
     android:paddingTop="12dp"
     android:paddingBottom="24dp"
     android:paddingStart="16dp"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Radius"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -115,7 +115,7 @@
             android:value="5000"
             app:thumbColor="@color/secondaryColor"
             app:trackColorActive="@color/secondaryColor"
-            app:trackColorInactive="@color/border_color" />
+            app:trackColorInactive="@color/colorBorder" />
     </LinearLayout>
 
     <!-- Action buttons -->
@@ -131,9 +131,9 @@
             android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:text="Delete"
-            android:textColor="@color/error"
+            android:textColor="@color/colorError "
             app:backgroundTint="@android:color/transparent"
-            app:strokeColor="@color/error"
+            app:strokeColor="@color/colorError "
             app:strokeWidth="1dp"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 

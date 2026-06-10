@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardBackgroundColor="@color/colorSurface"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp"
     app:cardPreventCornerOverlap="true"
@@ -32,7 +32,7 @@
                 android:layout_marginStart="16dp"
                 android:alpha="0.1"
                 android:src="@drawable/ic_ai_pattern"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
 
             <!-- Title with icon -->
             <LinearLayout
@@ -46,14 +46,14 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/ic_ai_pattern"
-                    app:tint="@color/textLight"
+                    app:tint="@color/white "
                     android:layout_marginEnd="10dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AI Rewrite"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/white "
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
@@ -71,7 +71,7 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/close"
                 app:srcCompat="@drawable/ic_baseline_cancel_24"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
 
         </RelativeLayout>
 
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
                     android:text="Selected text:"
-                    android:textColor="@color/primaryTextColor"
+                    android:textColor="@color/textPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
@@ -110,7 +110,7 @@
                     android:fontFamily="sans-serif"
                     android:maxLines="3"
                     android:padding="12dp"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="14sp"
                     app:cornerRadius="8dp" />
 
@@ -120,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Rewrite instructions:"
-                    android:textColor="@color/primaryTextColor"
+                    android:textColor="@color/textPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
@@ -138,7 +138,7 @@
                     app:endIconMode="clear_text"
                     app:endIconTint="@color/secondaryColor"
                     app:hintTextColor="@color/secondaryColor"
-                    app:placeholderTextColor="@color/secondaryTextColor"
+                    app:placeholderTextColor="@color/textSecondary"
                     app:startIconDrawable="@drawable/ic_edit_note"
                     app:startIconTint="@color/secondaryColor">
 
@@ -153,8 +153,8 @@
                         android:minHeight="80dp"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/secondaryTextColor"
+                        android:textColor="@color/textPrimary"
+                        android:textColorHint="@color/textSecondary"
                         android:textSize="14sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Groq Model:"
-                    android:textColor="@color/primaryTextColor"
+                    android:textColor="@color/textPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
@@ -176,7 +176,7 @@
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/spinner_background"
                     android:paddingHorizontal="12dp"
-                    android:popupBackground="@color/surfaceLight" />
+                    android:popupBackground="@color/colorSurface" />
 
                 <!-- Token Usage Warning -->
                 <LinearLayout
@@ -225,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Total characters:"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="12sp" />
 
                     <TextView
@@ -233,7 +233,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textColor="@color/primaryTextColor"
+                        android:textColor="@color/textPrimary"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:layout_marginEnd="12dp" />
@@ -242,7 +242,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="(~"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="12sp" />
 
                     <TextView
@@ -250,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textColor="@color/primaryTextColor"
+                        android:textColor="@color/textPrimary"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -258,7 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=" tokens)"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -279,7 +279,7 @@
                         android:layout_weight="1"
                         android:layout_marginEnd="12dp"
                         android:text="Cancel"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:cornerRadius="8dp" />
@@ -291,7 +291,7 @@
                         android:layout_height="48dp"
                         android:layout_weight="1"
                         android:text="Rewrite"
-                        android:textColor="@color/textLight"
+                        android:textColor="@color/white "
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:backgroundTint="@color/secondaryColor"

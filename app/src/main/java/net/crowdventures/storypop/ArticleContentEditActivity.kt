@@ -131,11 +131,11 @@ class ArticleContentEditActivity : BaseActivity() {
             val theme = ColorPickerDialog.ColorPickerTheme(
                 ContextCompat.getColor(this@ArticleContentEditActivity, R.color.primaryColor),
                 ContextCompat.getColor(this@ArticleContentEditActivity, R.color.secondaryColor),
-                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.secondaryTextColor),
-                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.primaryTextColor),
-                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.surfaceLight),
+                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.textSecondary),
+                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.textPrimary),
+                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.colorSurface),
                 ContextCompat.getColor(this@ArticleContentEditActivity, R.color.secondaryColor_20),
-                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.border_color)
+                ContextCompat.getColor(this@ArticleContentEditActivity, R.color.colorBorder)
             )
 
             val colorPickerDialog =
@@ -1217,7 +1217,7 @@ class ArticleContentEditActivity : BaseActivity() {
                 )
                 titleBackgroundImageView.layoutParams = layoutParams
             } else if (storyViewModel.titleImageUri.value == null) titleBackgroundImageView.setColorFilter(
-                getColor(R.color.darkGray),
+                getColor(R.color.textSecondary),
                 PorterDuff.Mode.SRC
             )
         }
@@ -1235,7 +1235,7 @@ class ArticleContentEditActivity : BaseActivity() {
                         )
                     )
                     locationImg.imageTintList =
-                        ColorStateList.valueOf(resources.getColor(R.color.main))
+                        ColorStateList.valueOf(resources.getColor(R.color.primaryColor))
                     locationImg.setOnClickListener {
                         locationImg.visibility = View.GONE
                         locationProgressBar.visibility = View.VISIBLE

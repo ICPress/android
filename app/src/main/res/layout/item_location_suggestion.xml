@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Location Name"
-            android:textColor="@color/textLight"
+            android:textColor="@color/white "
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:layout_gravity="end"
             android:layout_marginTop="8dp"
             android:text="Add"
-            android:textColor="@color/textLight"
+            android:textColor="@color/white "
             android:backgroundTint="@color/secondaryColor"
             app:cornerRadius="16dp" />
     </LinearLayout>

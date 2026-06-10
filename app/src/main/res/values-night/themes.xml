@@ -1,288 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Theme.StoryPop" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- ===== PROFESSIONAL DARK THEME - BLUE PALETTE ===== -->
-
-        <!-- Primary brand color - Dark blue -->
         <item name="colorPrimary">@color/primaryDarkColor</item>
         <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/textDark</item>
+        <item name="colorOnPrimary">@color/textPrimary</item>
 
-        <!-- Secondary brand color - Bright accent blue for dark mode -->
         <item name="colorSecondary">@color/secondaryLightColor</item>
         <item name="colorSecondaryVariant">@color/secondaryColor</item>
         <item name="colorOnSecondary">@color/black</item>
 
-        <!-- Surface and Background - Dark theme surfaces -->
-        <item name="android:colorBackground">@color/backgroundDark</item>
-        <item name="colorSurface">@color/surfaceDark</item>
-        <item name="colorOnSurface">@color/textDark</item>
-        <item name="colorOnBackground">@color/textDark</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
+        <item name="colorOnBackground">@color/textPrimary</item>
 
-        <!-- Text Colors for Dark Mode -->
-        <item name="android:textColorPrimary">@color/textDark</item>
-        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
-        <item name="android:textColorTertiary">@color/gray</item>
-        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+        <item name="android:textColorTertiary">@color/textTertiary</item>
+        <item name="android:textColorHint">@color/textTertiary</item>
         <item name="android:textColorLink">@color/secondaryLightColor</item>
 
-        <!-- Control Colors for Dark Mode -->
         <item name="colorControlNormal">@color/gray</item>
         <item name="colorControlActivated">@color/secondaryLightColor</item>
         <item name="colorControlHighlight">@color/secondaryLightColor</item>
-        <item name="colorSwitchThumbNormal">@color/textDark</item>
+        <item name="colorSwitchThumbNormal">@color/textPrimary</item>
+        <item name="colorError">@color/colorError</item>
 
-        <!-- Error Color for Dark Mode -->
-        <item name="colorError">@color/errorDark</item>
-
-        <!-- Status and Navigation Bars for Dark Mode -->
-        <item name="android:statusBarColor">@color/backgroundDark</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
 
-        <!-- AppBar and Toolbar -->
         <item name="android:actionBarStyle">@style/Widget.StoryPop.ActionBar</item>
         <item name="actionBarStyle">@style/Widget.StoryPop.ActionBar</item>
         <item name="toolbarStyle">@style/Widget.StoryPop.Toolbar</item>
-
-        <!-- Button Styles -->
         <item name="materialButtonStyle">@style/Widget.StoryPop.Button</item>
         <item name="borderlessButtonStyle">@style/Widget.StoryPop.Button.TextButton</item>
         <item name="android:buttonStyle">@style/Widget.StoryPop.Button</item>
-
-        <!-- CardView Style -->
         <item name="cardViewStyle">@style/Widget.StoryPop.CardView</item>
-
-        <!-- Dialog Theme -->
         <item name="android:dialogTheme">@style/Theme.StoryPop.Dialog</item>
         <item name="android:alertDialogTheme">@style/Theme.StoryPop.Dialog.Alert</item>
-
-        <!-- Bottom Sheet -->
         <item name="bottomSheetDialogTheme">@style/Theme.StoryPop.BottomSheetDialog</item>
-
-        <!-- Popup Menu -->
         <item name="android:popupMenuStyle">@style/Widget.StoryPop.PopupMenu</item>
-        <!-- Progress Bar -->
         <item name="android:progressBarStyle">@style/Widget.StoryPop.ProgressBar</item>
-
-
-        <!-- Selection Handle Colors -->
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/secondaryLightColor</item>
 
-        <!-- Tag Display Attributes -->
-        <item name="tagBackground">@color/tag_background_dark</item>
-        <item name="tagIconColor">@color/tag_icon_color_dark</item>
-        <item name="tagTextColor">@color/tag_text_color_dark</item>
-
-        <!-- Tag Edit Attributes -->
-        <item name="tagBackgroundEdit">@color/tag_background_edit_dark</item>
-        <item name="tagBorderEdit">@color/tag_border_edit_dark</item>
-        <item name="tagIconColorEdit">@color/tag_icon_color_edit_dark</item>
-        <item name="tagTextColorEdit">@color/tag_text_color_edit_dark</item>
-        <item name="tagRemoveIconColor">@color/tag_remove_icon_color_dark</item>
+        <item name="tagBackground">@color/tagBackground</item>
+        <item name="tagIconColor">@color/tagIconColor</item>
+        <item name="tagTextColor">@color/tagTextColor</item>
+        <item name="tagBackgroundEdit">@color/tagBackgroundEdit</item>
+        <item name="tagBorderEdit">@color/tagBorderEdit</item>
+        <item name="tagIconColorEdit">@color/tagIconColorEdit</item>
+        <item name="tagTextColorEdit">@color/tagTextColorEdit</item>
+        <item name="tagRemoveIconColor">@color/tagRemoveIconColor</item>
     </style>
 
-    <!-- No ActionBar theme -->
-    <style name="Theme.StoryPop.NoActionBar" parent="Theme.StoryPop">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">false</item>
-    </style>
-
-    <!-- Fullscreen theme -->
-    <style name="Theme.StoryPop.Fullscreen" parent="Theme.StoryPop">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-    <!-- Dialog Theme -->
     <style name="Theme.StoryPop.Dialog" parent="Theme.MaterialComponents.Dialog">
         <item name="colorPrimary">@color/primaryDarkColor</item>
-        <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/textDark</item>
+        <item name="colorOnPrimary">@color/textPrimary</item>
         <item name="colorSecondary">@color/secondaryLightColor</item>
-        <item name="colorSecondaryVariant">@color/secondaryColor</item>
-        <item name="android:colorBackground">@color/surfaceDark</item>
-        <item name="android:textColorPrimary">@color/textDark</item>
-        <item name="android:textColorSecondary">@color/textDark</item>
+        <item name="android:colorBackground">@color/colorSurface</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
     </style>
 
-    <!-- Alert Dialog Theme -->
     <style name="Theme.StoryPop.Dialog.Alert" parent="Theme.MaterialComponents.Dialog.Alert">
         <item name="colorPrimary">@color/primaryDarkColor</item>
-        <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/textDark</item>
-        <item name="colorSecondary">@color/secondaryLightColor</item>
-        <item name="android:colorBackground">@color/surfaceDark</item>
+        <item name="colorOnPrimary">@color/textPrimary</item>
+        <item name="android:colorBackground">@color/colorSurface</item>
     </style>
 
-    <!-- Bottom Sheet Dialog Theme -->
     <style name="Theme.StoryPop.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
         <item name="colorPrimary">@color/primaryDarkColor</item>
-        <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/textDark</item>
-        <item name="colorSecondary">@color/secondaryLightColor</item>
-        <item name="android:colorBackground">@color/surfaceDark</item>
+        <item name="colorOnPrimary">@color/textPrimary</item>
+        <item name="android:colorBackground">@color/colorSurface</item>
         <item name="bottomSheetStyle">@style/Widget.StoryPop.BottomSheet</item>
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
-    </style>
-
-    <!-- AppBar Overlay -->
-    <style name="Theme.StoryPop.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <!-- Popup Overlay -->
-    <style name="Theme.StoryPop.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
-
-    <!-- Expanded AppBar Title Style (same as light for readability on images) -->
-    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">28sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
-        <item name="android:shadowColor">@color/black_70</item>
-        <item name="android:shadowDx">1</item>
-        <item name="android:shadowDy">1</item>
-        <item name="android:shadowRadius">3</item>
-    </style>
-
-    <!-- Collapsed AppBar Title Style -->
-    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:fontFamily">@font/mplus2_regular</item>
-    </style>
-
-    <!-- ===== WIDGET STYLES (Dark Mode Variants) ===== -->
-
-    <!-- ActionBar Style -->
-    <style name="Widget.StoryPop.ActionBar" parent="Widget.MaterialComponents.ActionBar.Primary">
-        <item name="titleTextStyle">@style/TextAppearance.StoryPop.ActionBar.Title</item>
-        <item name="subtitleTextStyle">@style/TextAppearance.StoryPop.ActionBar.Subtitle</item>
-        <item name="background">@color/primaryDarkColor</item>
-        <item name="elevation">4dp</item>
-    </style>
-
-    <!-- Toolbar Style -->
-    <style name="Widget.StoryPop.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
-        <item name="titleTextColor">@color/white</item>
-        <item name="subtitleTextColor">@color/white_70</item>
-        <item name="android:background">@color/primaryDarkColor</item>
-        <item name="navigationIconTint">@color/white</item>
-    </style>
-
-    <!-- Button Style -->
-    <style name="Widget.StoryPop.Button" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">@color/white</item>
-        <item name="backgroundTint">@color/secondaryLightColor</item>
-        <item name="rippleColor">@color/white_30</item>
-        <item name="cornerRadius">8dp</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
-    </style>
-
-    <!-- Text Button Style -->
-    <style name="Widget.StoryPop.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/secondaryLightColor</item>
-        <item name="rippleColor">@color/secondaryLightColor_20</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
-    </style>
-
-    <!-- CardView Style -->
-    <style name="Widget.StoryPop.CardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardElevation">4dp</item>
-        <item name="cardBackgroundColor">@color/surfaceDark</item>
-    </style>
-
-    <!-- BottomSheet Style -->
-    <style name="Widget.StoryPop.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
-        <item name="android:background">@color/surfaceDark</item>
-        <item name="shapeAppearance">@style/ShapeAppearance.StoryPop.BottomSheet</item>
-    </style>
-
-    <!-- Shape Appearance for BottomSheet -->
-    <style name="ShapeAppearance.StoryPop.BottomSheet" parent="ShapeAppearance.MaterialComponents.MediumComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopRight">16dp</item>
-        <item name="cornerSizeTopLeft">16dp</item>
-        <item name="cornerSizeBottomRight">0dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
-    </style>
-
-    <!-- PopupMenu Style -->
-    <style name="Widget.StoryPop.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
-        <item name="android:popupBackground">@color/surfaceDark</item>
-        <item name="android:textColor">@color/textDark</item>
-    </style>
-
-
-    <!-- ProgressBar Style -->
-    <style name="Widget.StoryPop.ProgressBar" parent="Widget.MaterialComponents.CircularProgressIndicator">
-        <!-- This is the attribute Material 2/3 uses -->
-        <item name="indicatorColor">@color/secondaryColor</item>
-        <!-- Optional: Ensure the track (the "empty" part) isn't
-             matching dark background -->
-        <item name="trackColor">#20FFFFFF</item>
-    </style>
-
-    <!-- ===== TEXT APPEARANCES (Dark Mode) ===== -->
-
-    <!-- ActionBar Title -->
-    <style name="TextAppearance.StoryPop.ActionBar.Title" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
-    </style>
-
-    <!-- ActionBar Subtitle -->
-    <style name="TextAppearance.StoryPop.ActionBar.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/white_70</item>
-        <item name="android:fontFamily">@font/mplus2_regular</item>
-    </style>
-
-    <!-- Headline TextAppearance -->
-    <style name="TextAppearance.StoryPop.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="android:textColor">@color/textDark</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
-    </style>
-
-    <style name="TextAppearance.StoryPop.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
-        <item name="android:textColor">@color/textDark</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
-    </style>
-
-    <!-- Body TextAppearance -->
-    <style name="TextAppearance.StoryPop.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textColor">@color/textDark</item>
-        <item name="android:fontFamily">@font/mplus2_regular</item>
-        <item name="android:lineSpacingExtra">4sp</item>
-    </style>
-
-    <style name="TextAppearance.StoryPop.Body2" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="android:textColor">@color/secondaryTextColor</item>
-        <item name="android:fontFamily">@font/mplus2_regular</item>
-    </style>
-
-    <!-- Caption TextAppearance -->
-    <style name="TextAppearance.StoryPop.Caption" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="android:textColor">@color/secondaryTextColor</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">@font/mplus2_regular</item>
-    </style>
-
-    <!-- Button TextAppearance -->
-    <style name="TextAppearance.StoryPop.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:fontFamily">@font/mplus2_medium</item>
     </style>
 </resources>

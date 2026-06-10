@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardBackgroundColor="@color/colorSurface"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp"
     app:cardPreventCornerOverlap="true"
@@ -32,7 +32,7 @@
                 android:layout_marginStart="16dp"
                 android:alpha="0.1"
                 android:src="@drawable/ic_ai_pattern"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
 
             <ImageView
                 android:layout_width="80dp"
@@ -43,7 +43,7 @@
                 android:alpha="0.1"
                 android:rotation="15"
                 android:src="@drawable/ic_ai_pattern"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
 
             <!-- Title -->
             <LinearLayout
@@ -62,13 +62,13 @@
                     android:layout_height="28dp"
                     android:src="@drawable/ic_lock"
                     android:layout_marginEnd="12dp"
-                    app:tint="@color/textLight" />
+                    app:tint="@color/white " />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Add Private Source"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/white "
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
@@ -86,7 +86,7 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/close"
                 app:srcCompat="@drawable/ic_baseline_cancel_24"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
 
         </RelativeLayout>
 
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="This information is confidential and only visible to moderators"
-                    android:textColor="@color/primaryTextColor"
+                    android:textColor="@color/textPrimary"
                     android:textSize="12sp"
                     android:fontFamily="sans-serif" />
             </LinearLayout>
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="Source Name *"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -151,7 +151,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/secondaryColor"
                 app:hintTextColor="@color/secondaryColor"
-                app:placeholderTextColor="@color/secondaryTextColor"
+                app:placeholderTextColor="@color/textSecondary"
                 app:startIconDrawable="@drawable/ic_person"
                 app:startIconTint="@color/secondaryColor">
 
@@ -166,8 +166,8 @@
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="12dp"
                     android:singleLine="true"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textSecondary"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="Address (Optional)"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -195,7 +195,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/secondaryColor"
                 app:hintTextColor="@color/secondaryColor"
-                app:placeholderTextColor="@color/secondaryTextColor"
+                app:placeholderTextColor="@color/textSecondary"
                 app:startIconDrawable="@drawable/ic_maps_black"
                 app:startIconTint="@color/secondaryColor">
 
@@ -209,8 +209,8 @@
                     android:maxLines="2"
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="12dp"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textSecondary"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -220,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="Phone (Optional)"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -238,7 +238,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/secondaryColor"
                 app:hintTextColor="@color/secondaryColor"
-                app:placeholderTextColor="@color/secondaryTextColor"
+                app:placeholderTextColor="@color/textSecondary"
                 app:startIconDrawable="@drawable/ic_phone"
                 app:startIconTint="@color/secondaryColor">
 
@@ -253,8 +253,8 @@
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="12dp"
                     android:singleLine="true"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textSecondary"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -264,7 +264,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="Additional Notes (Optional)"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -280,7 +280,7 @@
                 app:boxStrokeWidth="1dp"
                 app:boxStrokeWidthFocused="2dp"
                 app:hintTextColor="@color/secondaryColor"
-                app:placeholderTextColor="@color/secondaryTextColor">
+                app:placeholderTextColor="@color/textSecondary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/source_notes"
@@ -293,8 +293,8 @@
                     android:maxLines="3"
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="12dp"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textSecondary"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -315,7 +315,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="12dp"
                     android:text="Cancel"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium"
@@ -333,7 +333,7 @@
                     android:letterSpacing="0.05"
                     android:stateListAnimator="@null"
                     android:text="Add Source"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/white "
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:translationZ="0dp"

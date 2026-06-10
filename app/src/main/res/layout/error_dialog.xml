@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardBackgroundColor="@color/colorSurface"
     app:cardCornerRadius="25dp"
     app:cardElevation="15dp">
 
@@ -20,7 +20,7 @@
             android:layout_marginEnd="10dp"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_baseline_cancel_24"
-            app:tint="@color/main" />
+            app:tint="@color/primaryColor" />
         <TextView
             android:id="@+id/error_text"
             android:layout_width="match_parent"

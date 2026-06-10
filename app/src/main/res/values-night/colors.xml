@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Only override what changes in dark mode -->
+    <color name="colorBackground">#0A0E17</color>
+    <color name="colorSurface">#121826</color>
+    <color name="colorBorder">#2A3655</color>
+
+    <color name="textPrimary">#E6EDF3</color>
+    <color name="textSecondary">#9FB3C8</color>
+    <color name="textTertiary">#5A6570</color>
+
+    <color name="colorError">#F56565</color>
+
+    <!-- Tag Display -->
+    <color name="tagBackground">#1E293B</color>
+    <color name="tagIconColor">#58A6FF</color>
+    <color name="tagTextColor">#D1DCE6</color>
+
+    <!-- Tag Edit -->
+    <color name="tagBackgroundEdit">#FF1E293B</color>
+    <color name="tagBorderEdit">#58A6FF</color>
+    <color name="tagIconColorEdit">#58A6FF</color>
+    <color name="tagTextColorEdit">#E6EDF3</color>
+    <color name="tagRemoveIconColor">#9FB3C8</color>
+</resources>

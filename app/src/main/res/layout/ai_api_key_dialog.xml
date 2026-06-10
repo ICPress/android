@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardBackgroundColor="@color/colorSurface"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp"
     app:cardPreventCornerOverlap="true"
@@ -32,7 +32,7 @@
                 android:layout_marginStart="16dp"
                 android:alpha="0.1"
                 android:src="@drawable/ic_ai_pattern"
-                android:tint="@color/textLight" />
+                android:tint="@color/white " />
 
             <ImageView
                 android:layout_width="80dp"
@@ -43,7 +43,7 @@
                 android:alpha="0.1"
                 android:rotation="15"
                 android:src="@drawable/ic_ai_pattern"
-                android:tint="@color/textLight" />
+                android:tint="@color/white " />
 
             <!-- Logo and Title -->
             <LinearLayout
@@ -62,14 +62,14 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/ic_groq_logo"
-                    android:tint="@color/textLight"
+                    android:tint="@color/white "
                     android:layout_marginEnd="12dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Groq AI"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/white "
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium" />
@@ -87,7 +87,7 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/close"
                 app:srcCompat="@drawable/ic_baseline_cancel_24"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
 
         </RelativeLayout>
 
@@ -107,7 +107,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="Connect with Groq AI"
                 android:textAlignment="center"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -119,7 +119,7 @@
                 android:layout_marginBottom="20dp"
                 android:text="Enter your Groq API key to enable AI-powered article rewriting and content enhancement"
                 android:textAlignment="center"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="14sp"
                 android:fontFamily="sans-serif"
                 android:lineSpacingExtra="4sp" />
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="API Key"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -148,7 +148,7 @@
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/secondaryColor"
                 app:hintTextColor="@color/secondaryColor"
-                app:placeholderTextColor="@color/secondaryTextColor"
+                app:placeholderTextColor="@color/textSecondary"
                 app:startIconDrawable="@drawable/ic_key"
                 app:startIconTint="@color/secondaryColor">
 
@@ -163,8 +163,8 @@
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="12dp"
                     android:singleLine="true"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textSecondary"
                     android:textSize="14sp"
                     android:letterSpacing="0.03" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -194,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
                     android:text="Get your free Groq API key from the GroqCloud console"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="13sp"
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="4sp" />
@@ -233,7 +233,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:text="✨ What you'll get:"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -265,7 +265,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Article rewriting"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="13sp"
                         android:fontFamily="sans-serif" />
                 </LinearLayout>
@@ -290,7 +290,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Content enhancement"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="13sp"
                         android:fontFamily="sans-serif" />
                 </LinearLayout>
@@ -314,7 +314,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Grammar checking"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="13sp"
                         android:fontFamily="sans-serif" />
                 </LinearLayout>
@@ -338,7 +338,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Title suggestions"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="13sp"
                         android:fontFamily="sans-serif" />
                 </LinearLayout>
@@ -367,7 +367,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Your API key is stored securely on your device and never shared"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="12sp"
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="2sp" />
@@ -390,7 +390,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="12dp"
                     android:text="Cancel"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium"
@@ -426,7 +426,7 @@
                     android:letterSpacing="0.05"
                     android:stateListAnimator="@null"
                     android:text="@android:string/ok"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/white "
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:translationZ="0dp"
@@ -454,7 +454,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Validating API key..."
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="13sp"
                     android:fontFamily="sans-serif" />
             </LinearLayout>

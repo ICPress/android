@@ -406,7 +406,7 @@ fun AIWizardTopBar(
                         indication = null
                     ) { onBack() }
                     .padding(6.dp),
-                tint = colorResource(id = R.color.textLight)
+                tint = colorResource(id = R.color.white)
             )
 
             // Title
@@ -422,7 +422,7 @@ fun AIWizardTopBar(
 
                         AIWizardStep.PROCESSING -> "Processing"
                     },
-                    color = colorResource(id = R.color.textLight),
+                    color = colorResource(id = R.color.white),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -464,7 +464,7 @@ fun AIWizardTopBar(
                         indication = null
                     ) { onClose() }
                     .padding(6.dp),
-                tint = colorResource(id = R.color.textLight)
+                tint = colorResource(id = R.color.white)
             )
         }
     }
@@ -486,16 +486,16 @@ fun StepIndicator(
                 .background(
                     when {
                         isCompleted -> colorResource(id = R.color.success)
-                        isActive -> colorResource(id = R.color.textLight)
-                        else -> colorResource(id = R.color.textLight).copy(alpha = 0.3f)
+                        isActive -> colorResource(id = R.color.white)
+                        else -> colorResource(id = R.color.white).copy(alpha = 0.3f)
                     }
                 )
         )
         Spacer(modifier = Modifier.width(4.dp))
         Text(
             text = label,
-            color = if (isActive) colorResource(id = R.color.textLight)
-            else colorResource(id = R.color.textLight).copy(alpha = 0.5f),
+            color = if (isActive) colorResource(id = R.color.white)
+            else colorResource(id = R.color.white).copy(alpha = 0.5f),
             fontSize = 11.sp
         )
     }
@@ -783,7 +783,7 @@ fun CustomizePromptStep(
             ),
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = MaterialTheme.colors.secondary,
-                unfocusedBorderColor = colorResource(id = R.color.border_color),
+                unfocusedBorderColor = colorResource(id = R.color.colorBorder),
                 focusedLabelColor = MaterialTheme.colors.secondary,
                 cursorColor = MaterialTheme.colors.secondary,
                 textColor = MaterialTheme.colors.onBackground,
@@ -950,7 +950,7 @@ fun CustomizePromptStep(
             ),
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 focusedBorderColor = MaterialTheme.colors.secondary,
-                unfocusedBorderColor = colorResource(id = R.color.border_color),
+                unfocusedBorderColor = colorResource(id = R.color.colorBorder),
                 focusedLabelColor = MaterialTheme.colors.secondary,
                 cursorColor = MaterialTheme.colors.secondary,
                 textColor = MaterialTheme.colors.onBackground,
@@ -1443,7 +1443,7 @@ fun ErrorDialog(
                 Icon(
                     imageVector = Icons.Default.Warning,
                     contentDescription = null,
-                    tint = colorResource(id = R.color.error),
+                    tint = colorResource(id = R.color.colorError),
                     modifier = Modifier.size(48.dp)
                 )
 
@@ -1454,7 +1454,7 @@ fun ErrorDialog(
                     text = "Error",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
-                    color = colorResource(id = R.color.error),
+                    color = colorResource(id = R.color.colorError),
                     textAlign = TextAlign.Center
                 )
 

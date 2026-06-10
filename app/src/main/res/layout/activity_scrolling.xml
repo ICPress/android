@@ -151,7 +151,7 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                app:backgroundTint="@color/error"
+                app:backgroundTint="@color/colorError "
                 app:icon="@drawable/ic_info_outline"
                 app:iconGravity="textStart"
                 app:iconPadding="8dp"

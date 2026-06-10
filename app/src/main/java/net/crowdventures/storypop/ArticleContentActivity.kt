@@ -421,16 +421,16 @@ class ArticleContentActivity : AppCompatActivity() {
 
                 when {
                     hasColon -> {
-                        charCountText.setTextColor(ContextCompat.getColor(this@ArticleContentActivity, R.color.error))
-                        submitBtn.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this@ArticleContentActivity, R.color.surfaceLight))
+                        charCountText.setTextColor(ContextCompat.getColor(this@ArticleContentActivity, R.color.colorError))
+                        submitBtn.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this@ArticleContentActivity, R.color.colorSurface))
                     }
                     length < 10 -> {
                         charCountText.setTextColor(ContextCompat.getColor(this@ArticleContentActivity, R.color.warning))
-                        submitBtn.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this@ArticleContentActivity, R.color.surfaceLight))
+                        submitBtn.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this@ArticleContentActivity, R.color.colorSurface))
                     }
                     else -> {
                         charCountText.setTextColor(ContextCompat.getColor(this@ArticleContentActivity, R.color.success))
-                        submitBtn.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this@ArticleContentActivity, R.color.error))
+                        submitBtn.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this@ArticleContentActivity, R.color.colorError))
                     }
                 }
             }
@@ -1316,7 +1316,7 @@ class ArticleContentActivity : AppCompatActivity() {
                         fab.imageTintList = ColorStateList.valueOf(
                             ContextCompat.getColor(
                                 this@ArticleContentActivity,
-                                R.color.darkGray
+                                R.color.textSecondary
                             )
                         )
                     }

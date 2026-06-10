@@ -136,7 +136,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="12dp"
                 android:text="Title Style"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="11sp"
                 android:letterSpacing="0.1"
                 android:alpha="0.6" />
@@ -172,7 +172,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Image"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="10sp"
                         android:alpha="0.7" />
                 </LinearLayout>
@@ -201,7 +201,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Background"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="10sp"
                         android:alpha="0.7" />
                 </LinearLayout>
@@ -231,7 +231,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Highlight"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="10sp"
                         android:alpha="0.7" />
                 </LinearLayout>
@@ -260,7 +260,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Map"
-                        android:textColor="@color/secondaryTextColor"
+                        android:textColor="@color/textSecondary"
                         android:textSize="10sp"
                         android:alpha="0.7" />
                 </LinearLayout>
@@ -305,7 +305,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_gravity="bottom"
-            android:background="@color/toolbar_background"
+            android:background="@color/colorBackground"
             android:elevation="4dp"
             android:orientation="horizontal"
             android:visibility="gone">
@@ -319,7 +319,7 @@
                 android:scaleType="centerInside"
                 style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/ic_bold_text"
-                app:tint="@color/primaryTextColor" />
+                app:tint="@color/textPrimary" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/italic_text_btn"
@@ -330,7 +330,7 @@
                 android:scaleType="centerInside"
                 style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/ic_italic"
-                app:tint="@color/primaryTextColor" />
+                app:tint="@color/textPrimary" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/underline_text_btn"
@@ -341,7 +341,7 @@
                 android:scaleType="centerInside"
                 style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/ic_underline"
-                app:tint="@color/primaryTextColor" />
+                app:tint="@color/textPrimary" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/text_size_increase_btn"
@@ -352,7 +352,7 @@
                 android:scaleType="centerInside"
                 style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/font_size_increase_icon"
-                app:tint="@color/primaryTextColor" />
+                app:tint="@color/textPrimary" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/refer_link_text_btn"
@@ -363,7 +363,7 @@
                 android:scaleType="centerInside"
                 style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/ic_custom_at"
-                app:tint="@color/primaryTextColor" />
+                app:tint="@color/textPrimary" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/ai_text_btn"
@@ -385,7 +385,7 @@
                 android:scaleType="centerInside"
                 style="?android:attr/borderlessButtonStyle"
                 android:src="@drawable/ic_image_photography"
-                app:tint="@color/primaryTextColor" />
+                app:tint="@color/textPrimary" />
         </LinearLayout>
 
         <!-- Review Button (replaces Publish) -->

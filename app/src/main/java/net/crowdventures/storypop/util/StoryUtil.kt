@@ -583,7 +583,7 @@ class StoryUtil {
                         Layout.Alignment.values()[style.additionalInfoFlag.toString().toInt()]
                     )
                     TextStyle.QUOTE -> spanObj =
-                        QuoteSpan(ContextCompat.getColor(context, R.color.main))
+                        QuoteSpan(ContextCompat.getColor(context, R.color.primaryColor))
                     TextStyle.BULLET_LIST ->
                         spanObj = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
                             val typedArray = context.obtainStyledAttributes(intArrayOf(R.attr.editTextColor))

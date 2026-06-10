@@ -516,7 +516,7 @@ class TextStyleManager(
                     finalStart = firstAndLastNewline.first
                     if (finalStart > finalEnd) finalStart = finalEnd
                 }
-                val span = QuoteSpan(getColor(editTextAttached.context, R.color.main))
+                val span = QuoteSpan(getColor(editTextAttached.context, R.color.primaryColor))
                 editTextAttached.text.setSpan(
                     span,
                     finalStart,
@@ -710,7 +710,7 @@ class TextStyleManager(
 
     private fun enableButton(imageButton: ImageButton) {
         imageButton.imageTintList = ColorStateList.valueOf(Color.WHITE)
-        imageButton.setBackgroundColor(getColor(imageButton.context, R.color.main))
+        imageButton.setBackgroundColor(getColor(imageButton.context, R.color.primaryColor))
     }
 
     fun addImageStyleFromBitmap(scaledBitmap: Bitmap, bitmapUri: Uri, miniatureBitmap: Bitmap?, loggedInUser:AccountInfoFull) {

@@ -1,89 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- ===== PROFESSIONAL BLUE COLOR PALETTE ===== -->
-    <!-- Light Theme Colors -->
-    <color name="primaryColor">#0A2463</color>        <!-- Deep tech blue - Primary brand color -->
-    <color name="primaryLightColor">#3E6B8C</color>    <!-- Medium blue - For light variants -->
-    <color name="primaryDarkColor">#061A40</color>     <!-- Darker blue - For variants -->
+    <!-- ===== BRAND COLORS (never change between themes) ===== -->
+    <color name="primaryColor">#0A2463</color>
+    <color name="primaryLightColor">#3E6B8C</color>
+    <color name="primaryDarkColor">#061A40</color>
 
-    <!-- Secondary/Action Colors -->
-    <color name="secondaryColor">#3E92CC</color>       <!-- Accent blue - Buttons, links -->
-    <color name="secondaryLightColor">#7CB9FF</color>  <!-- Lighter accent - Hover states -->
-    <color name="secondaryDarkColor">#2A7CB0</color>   <!-- Darker accent - Pressed states -->
+    <color name="secondaryColor">#3E92CC</color>
+    <color name="secondaryLightColor">#7CB9FF</color>
+    <color name="secondaryDarkColor">#2A7CB0</color>
 
-    <!-- Background & Surface Colors -->
-    <color name="backgroundLight">#F5F7FA</color>      <!-- Light gray background -->
-    <color name="surfaceLight">#FFFFFF</color>         <!-- White surface -->
-    <color name="backgroundDark">#0A0E17</color>       <!-- Dark blue-gray background -->
-    <color name="surfaceDark">#121826</color>          <!-- Dark surface -->
+    <!-- ===== SEMANTIC COLORS (override in values-night) ===== -->
+    <color name="colorBackground">#F5F7FA</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorBorder">#E1E5EB</color>
 
-    <!-- Text Colors -->
-    <color name="primaryTextColor">#1E1E24</color>     <!-- Dark gray for light theme text -->
-    <color name="secondaryTextColor">#5A6570</color>   <!-- Medium gray for secondary text -->
-    <color name="textLight">#FFFFFF</color>            <!-- White text for dark backgrounds -->
-    <color name="textDark">#E6EDF3</color>             <!-- Light gray for dark theme text -->
+    <color name="textPrimary">#1E1E24</color>
+    <color name="textSecondary">#5A6570</color>
+    <color name="textTertiary">#8C95A0</color>
 
-    <!-- Semantic Colors -->
-    <color name="error">#E53E3E</color>                <!-- Red for errors (light) -->
-    <color name="errorDark">#F56565</color>            <!-- Softer red for dark mode -->
-    <color name="success">#28a745</color>              <!-- Green for success -->
-    <color name="warning">#FDBC00</color>              <!-- Gold for warnings -->
-    <color name="warning_20">#33FDBC00</color>
-    <color name="heart">#ff0000</color>                 <!-- Heart/like color -->
+    <color name="colorError">#E53E3E</color>
 
-    <!-- Legacy / Utility Colors -->
-    <color name="darkGray">#5A6570</color>             <!-- Replaced with professional gray -->
-    <color name="gray">#8C95A0</color>                  <!-- Light gray for borders -->
-    <color name="black">#FF000000</color>
+    <!-- Tag Display -->
+    <color name="tagBackground">#FFE8F0FE</color>
+    <color name="tagIconColor">#3E92CC</color>
+    <color name="tagTextColor">#0A2463</color>
+
+    <!-- Tag Edit -->
+    <color name="tagBackgroundEdit">#F0F7FF</color>
+    <color name="tagBorderEdit">#3E92CC</color>
+    <color name="tagIconColorEdit">#3E92CC</color>
+    <color name="tagTextColorEdit">#0A2463</color>
+    <color name="tagRemoveIconColor">#8C95A0</color>
+
+    <!-- ===== FIXED UTILITY COLORS (never change) ===== -->
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#8C95A0</color>
+    <color name="success">#28a745</color>
+    <color name="warning">#FDBC00</color>
+    <color name="warning_20">#33FDBC00</color>
+    <color name="heart">#ff0000</color>
 
-    <!-- Material Design Compat Colors -->
-    <color name="purple_200">#E1E5EB</color>           <!-- Border color -->
-    <color name="purple_500">#8C95A0</color>            <!-- Tertiary text -->
-    <color name="purple_700">#5A6570</color>            <!-- Secondary text -->
-    <color name="teal_200">#3E92CC</color>              <!-- Matches secondaryColor -->
-    <color name="teal_700">#2A7CB0</color>              <!-- Matches secondaryDarkColor -->
-
-    <!-- Main Brand Color (used for backward compatibility) -->
-    <color name="main">#0A2463</color>                  <!-- Matches primaryColor -->
-
-
-
-    <!-- UI Element colors -->
-    <color name="avatar_background">#E8F0FE</color>   <!-- Light blue for avatars -->
-    <color name="toolbar_background">#F5F7FA</color>  <!-- Formatting toolbar -->
-    <color name="border_color">#E1E5EB</color>        <!-- Light borders -->
-    <color name="border_color_dark">#2A3655</color>   <!-- Dark borders -->
-    <!-- Tag colors -->
-    <color name="tag_icon_color">#3E92CC</color>           <!-- Accent blue for icon -->
-    <color name="tag_text_color">#0A2463</color>           <!-- Deep blue text for light mode -->
-
-    <!-- Tag Display Colors - Light Mode -->
-    <color name="tag_background_light">#E8F0FE</color>     <!-- Light blue background -->
-    <color name="tag_icon_color_light">#3E92CC</color>    <!-- Accent blue icon -->
-    <color name="tag_text_color_light">#0A2463</color>    <!-- Deep blue text -->
-
-    <!-- Tag Display Colors - Dark Mode -->
-    <color name="tag_background_dark">#1E293B</color>      <!-- Dark blue-gray -->
-    <color name="tag_icon_color_dark">#58A6FF</color>      <!-- Bright blue icon -->
-    <color name="tag_text_color_dark">#D1DCE6</color>      <!-- Light text -->
-
-    <!-- Tag Edit Colors - Light Mode -->
-    <color name="tag_background_edit_light">#F0F7FF</color>     <!-- Very light blue -->
-    <color name="tag_border_edit_light">#3E92CC</color>         <!-- Accent blue border -->
-    <color name="tag_icon_color_edit_light">#3E92CC</color>     <!-- Accent blue icon -->
-    <color name="tag_text_color_edit_light">#0A2463</color>     <!-- Deep blue text -->
-    <color name="tag_remove_icon_color_light">#8C95A0</color>   <!-- Medium gray -->
-
-    <!-- Tag Edit Colors - Dark Mode -->
-    <color name="tag_background_edit_dark">#1E293B</color>      <!-- Dark blue-gray -->
-    <color name="tag_border_edit_dark">#58A6FF</color>          <!-- Bright blue border -->
-    <color name="tag_icon_color_edit_dark">#58A6FF</color>      <!-- Bright blue icon -->
-    <color name="tag_text_color_edit_dark">#E6EDF3</color>      <!-- Light text -->
-    <color name="tag_remove_icon_color_dark">#9FB3C8</color>    <!-- Light gray -->
-
-
-    <!-- Alpha variants for overlays -->
     <color name="white_10">#1AFFFFFF</color>
     <color name="white_20">#33FFFFFF</color>
     <color name="white_30">#4DFFFFFF</color>
@@ -96,9 +53,6 @@
     <color name="black_50">#80000000</color>
     <color name="black_70">#B3000000</color>
 
-    <!-- Accent color alphas -->
     <color name="secondaryColor_20">#333E92CC</color>
     <color name="secondaryLightColor_20">#337CB9FF</color>
-
-
 </resources>

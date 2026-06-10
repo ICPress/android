@@ -466,7 +466,7 @@ class ArticleCommentAdapter(
                     submitReplyButton?.isEnabled = text.isNotEmpty()
                     submitReplyButton?.backgroundTintList = ColorStateList.valueOf(
                         view.context.getColor(
-                            if (text.isNotEmpty()) R.color.darkGray else R.color.purple_500
+                            if (text.isNotEmpty()) R.color.textSecondary else R.color.gray
                         )
                     )
                 }

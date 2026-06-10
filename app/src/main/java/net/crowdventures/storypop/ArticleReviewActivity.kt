@@ -324,7 +324,7 @@ class ArticleReviewActivity : BaseActivity() {
 
             val categoryDesc = TextView(this).apply {
                 text = category.description
-                setTextColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.secondaryTextColor))
+                setTextColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.textSecondary))
                 textSize = 12f
                 setPadding(0, 0, 0, 8)
             }
@@ -333,7 +333,7 @@ class ArticleReviewActivity : BaseActivity() {
             category.subRules.forEach { rule ->
                 val ruleView = TextView(this).apply {
                     text = "• ${rule.text}"
-                    setTextColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.primaryTextColor))
+                    setTextColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.textPrimary))
                     textSize = 12f
                     setPadding(16, 2, 0, 2)
                 }
@@ -345,7 +345,7 @@ class ArticleReviewActivity : BaseActivity() {
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     1
                 )
-                setBackgroundColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.border_color))
+                setBackgroundColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.colorBorder))
                 setPadding(0, 12, 0, 0)
             }
             categoryView.addView(divider)
@@ -604,7 +604,7 @@ class ArticleReviewActivity : BaseActivity() {
             }
 
             aiReviewMessage.text = explanation
-            aiReviewMessage.setTextColor(ContextCompat.getColor(this, R.color.primaryTextColor))
+            aiReviewMessage.setTextColor(ContextCompat.getColor(this, R.color.textPrimary))
 
             // Display category scores
             categoryScores.forEach { (name, score) ->
@@ -622,7 +622,7 @@ class ArticleReviewActivity : BaseActivity() {
                 val barColor = when {
                     score >= 7 -> R.color.success
                     score >= 5 -> R.color.warning
-                    else -> R.color.error
+                    else -> R.color.colorError
                 }
 
                 val layoutParams = barView.layoutParams
@@ -638,7 +638,7 @@ class ArticleReviewActivity : BaseActivity() {
                 suggestions.forEach { suggestion ->
                     val suggestionView = TextView(this).apply {
                         text = "• $suggestion"
-                        setTextColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.primaryTextColor))
+                        setTextColor(ContextCompat.getColor(this@ArticleReviewActivity, R.color.textPrimary))
                         textSize = 13f
                         setPadding(0, 4, 0, 4)
                     }
@@ -648,7 +648,7 @@ class ArticleReviewActivity : BaseActivity() {
 
         } catch (e: Exception) {
             aiReviewMessage.text = "Failed to parse review results: ${e.message}"
-            aiReviewMessage.setTextColor(ContextCompat.getColor(this, R.color.error))
+            aiReviewMessage.setTextColor(ContextCompat.getColor(this, R.color.colorError))
         }
     }
 }

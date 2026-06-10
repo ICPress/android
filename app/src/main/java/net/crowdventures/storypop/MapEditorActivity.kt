@@ -191,12 +191,12 @@ class MapEditorActivity : AppCompatActivity() {
                 text = label
                 isCheckable = true
                 tag = tool
-                chipBackgroundColor = ContextCompat.getColorStateList(this@MapEditorActivity, R.color.surfaceLight)
-                chipStrokeColor = ContextCompat.getColorStateList(this@MapEditorActivity, R.color.border_color)
+                chipBackgroundColor = ContextCompat.getColorStateList(this@MapEditorActivity, R.color.colorSurface)
+                chipStrokeColor = ContextCompat.getColorStateList(this@MapEditorActivity, R.color.colorBorder)
                 chipStrokeWidth = 1f
                 setChipIconResource(getIconForTool(tool))
                 chipIconTint = ContextCompat.getColorStateList(this@MapEditorActivity, R.color.primaryColor)
-                setTextColor(ContextCompat.getColorStateList(this@MapEditorActivity, R.color.primaryTextColor))
+                setTextColor(ContextCompat.getColorStateList(this@MapEditorActivity, R.color.textPrimary))
             }
             toolChipGroup.addView(chip)
             chip.setOnClickListener {
@@ -219,10 +219,10 @@ class MapEditorActivity : AppCompatActivity() {
                 chip.chipIconTint = ContextCompat.getColorStateList(this, R.color.white)
                 chip.chipStrokeColor = ContextCompat.getColorStateList(this, R.color.secondaryColor)
             } else {
-                chip.chipBackgroundColor = ContextCompat.getColorStateList(this, R.color.surfaceLight)
-                chip.setTextColor(ContextCompat.getColorStateList(this, R.color.primaryTextColor))
+                chip.chipBackgroundColor = ContextCompat.getColorStateList(this, R.color.colorSurface)
+                chip.setTextColor(ContextCompat.getColorStateList(this, R.color.textPrimary))
                 chip.chipIconTint = ContextCompat.getColorStateList(this, R.color.primaryColor)
-                chip.chipStrokeColor = ContextCompat.getColorStateList(this, R.color.border_color)
+                chip.chipStrokeColor = ContextCompat.getColorStateList(this, R.color.colorBorder)
             }
         }
     }

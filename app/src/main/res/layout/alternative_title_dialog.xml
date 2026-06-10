@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    app:cardBackgroundColor="@color/surfaceLight"
+    app:cardBackgroundColor="@color/colorSurface"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp"
     app:cardPreventCornerOverlap="true"
@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="Story Title"
-                android:textColor="@color/textLight"
+                android:textColor="@color/white "
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium"/>
@@ -45,7 +45,7 @@
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="@string/close"
                 app:srcCompat="@drawable/ic_baseline_cancel_24"
-                app:tint="@color/textLight" />
+                app:tint="@color/white " />
         </RelativeLayout>
 
         <!-- Content Section -->
@@ -89,9 +89,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Optional"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="12sp"
-                    android:background="@color/surfaceLight"
+                    android:background="@color/colorSurface"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
                     app:cornerRadius="12dp" />
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="Give your story a compelling title"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/textPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-medium" />
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="A great title helps readers discover and engage with your content"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="14sp"
                 android:lineSpacingExtra="4sp"
                 android:fontFamily="sans-serif" />
@@ -132,9 +132,9 @@
                 app:boxStrokeWidthFocused="2dp"
                 app:counterEnabled="true"
                 app:counterMaxLength="60"
-                app:counterTextColor="@color/secondaryTextColor"
+                app:counterTextColor="@color/textSecondary"
                 app:hintTextColor="@color/secondaryColor"
-                app:placeholderTextColor="@color/secondaryTextColor"
+                app:placeholderTextColor="@color/textSecondary"
                 app:startIconDrawable="@drawable/ic_title"
                 app:startIconTint="@color/secondaryColor">
 
@@ -150,8 +150,8 @@
                     android:maxLines="2"
                     android:paddingHorizontal="16dp"
                     android:paddingVertical="12dp"
-                    android:textColor="@color/primaryTextColor"
-                    android:textColorHint="@color/secondaryTextColor"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textSecondary"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,7 +162,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="24dp"
                 android:text="💡 Tips for a great title:\n• Be clear and specific\n• Include key topics\n• Keep it under 60 characters"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/textSecondary"
                 android:textSize="13sp"
                 android:lineSpacingExtra="4sp"
                 android:fontFamily="sans-serif"
@@ -187,7 +187,7 @@
                     android:layout_height="48dp"
                     android:layout_marginEnd="12dp"
                     android:text="Skip"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium"
@@ -202,7 +202,7 @@
                     android:layout_height="48dp"
                     android:layout_marginEnd="12dp"
                     android:text="Cancel"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/textSecondary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif-medium"
@@ -219,7 +219,7 @@
                     android:letterSpacing="0.05"
                     android:stateListAnimator="@null"
                     android:text="Publish"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/white "
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:translationZ="0dp"

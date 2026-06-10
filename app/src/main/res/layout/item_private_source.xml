@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Source Name"
-            android:textColor="@color/primaryTextColor"
+            android:textColor="@color/textPrimary"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Address"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="@color/textSecondary"
             android:textSize="12sp"
             android:visibility="gone" />
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Phone"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="@color/textSecondary"
             android:textSize="12sp"
             android:visibility="gone" />
 
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Notes"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="@color/textSecondary"
             android:textSize="12sp"
             android:visibility="gone" />
 
@@ -58,6 +58,6 @@
             android:layout_height="24dp"
             android:layout_gravity="end"
             android:src="@drawable/ic_baseline_cancel_24"
-            app:tint="@color/secondaryTextColor" />
+            app:tint="@color/textSecondary" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

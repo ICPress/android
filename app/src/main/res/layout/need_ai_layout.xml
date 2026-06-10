@@ -28,6 +28,6 @@
         android:fontFamily="sans-serif"
         android:maxLines="1"
         android:text="@string/need_writing_help"
-        android:textColor="@color/secondaryTextColor"
+        android:textColor="@color/textSecondary"
         android:textStyle="bold" />
 </LinearLayout>

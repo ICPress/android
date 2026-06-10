@@ -7,10 +7,11 @@
     android:layout_marginBottom="6dp"
     android:background="@drawable/tag_background"
     android:orientation="horizontal"
-    android:paddingStart="8dp"
-    android:paddingTop="4dp"
+    android:paddingStart="10dp"
+    android:paddingTop="6dp"
     android:paddingEnd="10dp"
-    android:paddingBottom="4dp">
+    android:paddingBottom="6dp"
+    android:gravity="center_vertical">
 
     <ImageView
         android:id="@+id/hashtag_iv"
@@ -20,7 +21,7 @@
         android:layout_marginEnd="4dp"
         android:importantForAccessibility="no"
         android:src="@drawable/ic_tag_black_24dp"
-        app:tint="?attr/tagIconColor" />
+        app:tint="?attr/tagTextColor" />
 
     <TextView
         android:id="@+id/hashtag_tv"
@@ -30,8 +31,7 @@
         android:ellipsize="end"
         android:fontFamily="sans-serif-medium"
         android:maxLines="1"
-        android:text="swedenverylongtag"
         android:textColor="?attr/tagTextColor"
-        android:textSize="12sp" />
+        android:textSize="11sp" />
 
 </LinearLayout>
