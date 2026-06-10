@@ -123,6 +123,7 @@ class S3Handler {
                     fileName,
                     body.contentLength(),
                     authToken,
+                    "public, max-age=31536000, immutable",
                     body
                 )
                 if (response.code() == 201) {

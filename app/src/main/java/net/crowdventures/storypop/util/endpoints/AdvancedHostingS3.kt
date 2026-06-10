@@ -15,6 +15,7 @@ interface AdvancedHostingS3 {
         @Path("fileName") fileName: String,
         @Header("Content-Length") length: Long,
         @Header("X-Auth-Token") authorization: String,
+        @Header("Cache-Control") cacheControl: String,
         @Body() body: RequestBody
     ): Response<ResponseBody>
 
