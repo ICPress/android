@@ -28,6 +28,8 @@ interface StoryDao {
     fun get(storyId:UUID): LiveData<StoryRoom>
     @Query("SELECT * FROM storyroom WHERE storyId == :storyId")
     fun getImmediate(storyId:UUID): StoryRoom
+    @Query("SELECT * FROM storyroom WHERE slugTitle == :slugTitle AND isPublished == 1")
+    fun getImmediatePublished(slugTitle:String): StoryRoom?
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun update(storyRoom: StoryRoom)
     @Delete

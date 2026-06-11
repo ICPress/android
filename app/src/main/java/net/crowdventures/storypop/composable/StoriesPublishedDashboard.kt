@@ -181,7 +181,7 @@ class StoriesPublishedDashboard {
                     if (userListPendingItems.itemCount > 0) {
                         items(
                             count = userListPendingItems.itemCount,
-                            key = { index -> "pending_${userListPendingItems[index]?.storyUUID ?: index}" }
+                            key = { index -> "pending_${userListPendingItems[index]?.storyUUID ?: "pending_" +index}" }
                         ) { index ->
                             val item = userListPendingItems[index]
                             if (item != null) {

@@ -135,16 +135,19 @@ class PendingUploadUtil {
             if (uploadResult.first == FlowStatus.SUCCESS) {
                 Constants.getStoryDatabase(context).storyPendingUploadDao()
                     .deleteAllForAssociatedID(current.associatedID)
-                if (!currentStory.isPublished || !currentStory.isUploaded) {
-                    val currentTime =
-                        if (TrueTime.isInitialized()) DateTime(TrueTime.now()).toDateTime(
-                            DateTimeZone.UTC
-                        ) else DateTime(DateTimeZone.UTC)
-                    currentStory.isPublished = true
-                    currentStory.isUploaded = true
-                    currentStory.entryTimeStamp = currentTime.toString()
-                    currentStory.slugTitle = uploadResult.second
-                    storyDao.update(currentStory)
+                val existingStory = Constants.getStoryDatabase(context).storyDao().getImmediatePublished(uploadResult.second)
+                if (existingStory != null && existingStory.storyId != storyUUID) storyDao.delete(currentStory) //clear duplicate upload attempts of same article
+                else if (!currentStory.isPublished || !currentStory.isUploaded)
+                {
+                        val currentTime =
+                            if (TrueTime.isInitialized()) DateTime(TrueTime.now()).toDateTime(
+                                DateTimeZone.UTC
+                            ) else DateTime(DateTimeZone.UTC)
+                        currentStory.isPublished = true
+                        currentStory.isUploaded = true
+                        currentStory.entryTimeStamp = currentTime.toString()
+                        currentStory.slugTitle = uploadResult.second
+                        storyDao.update(currentStory)
                 }
             }
             return uploadResult.first
